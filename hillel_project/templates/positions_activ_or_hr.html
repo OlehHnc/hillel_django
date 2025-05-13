@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Активні або HR позиції</title>
+</head>
+<body>
+    <h2>Всі позиції, які є активними або які належать до відділу з назвою "HR"</h2>
+    <ul>
+        {% for pos in positions %}
+            <li>{{ pos.title }}</li>
+        {% empty %}
+            <li>Немає позицій для відображення.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Відділи з менеджерами</title>
+</head>
+<body>
+    <h2>Всі відділи з менеджерами (по алфавіту)</h2>
+    <ul>
+        {% for dep in departments %}
+            <li>{{ dep.name }}</li>
+        {% empty %}
+            <li>Немає відділів з менеджерами.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Список позицій</title>
+</head>
+<body>
+    <h2>Усі позиції, відсортовані за назвою</h2>
+    <ul>
+        {% for pos in positions %}
+            <li>{{ pos.title }} — {% if pos.is_active %}активна{% else %}неактивна{% endif %}</li>
+        {% empty %}
+            <li>Немає позицій для відображення.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
